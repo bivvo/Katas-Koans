@@ -98,5 +98,4 @@ class AboutSymbols < EdgeCase::Koan
   # THINK ABOUT IT:
   #
   # Why is it not a good idea to dynamically create a lot of symbols?
-  # SELF NOTE: You would end up polluting the symbol space with garbage. Unless you are using a single symbol over and over again there is no reason to create one.
 end
