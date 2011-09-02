@@ -7,18 +7,18 @@ end
 class AboutMethods < EdgeCase::Koan
 
   def test_calling_global_methods
-    assert_equal __, my_global_method(2,3)
+    assert_equal 5, my_global_method(2,3)
   end
 
   def test_calling_global_methods_without_parentheses
     result = my_global_method 2, 3
-    assert_equal __, result
+    assert_equal 5, result
   end
 
   # (NOTE: We are Using eval below because the example code is
   # considered to be syntactically invalid).
   def test_sometimes_missing_parentheses_are_ambiguous
-    eval "assert_equal 5, my_global_method 2, 3" # ENABLE CHECK
+    eval "assert_equal 5, my_global_method(2, 3)" # ENABLE CHECK
     #
     # Ruby doesn't know if you mean:
     #
@@ -33,15 +33,15 @@ class AboutMethods < EdgeCase::Koan
   # NOTE: wrong number of argument is not a SYNTAX error, but a
   # runtime error.
   def test_calling_global_methods_with_wrong_number_of_arguments
-    exception = assert_raise(___) do
+    exception = assert_raise(ArgumentError) do
       my_global_method
     end
-    assert_match(/__/, exception.message)
+    assert_match("wrong number of arguments (0 for 2)", exception.message)
 
-    exception = assert_raise(___) do
+    exception = assert_raise(ArgumentError) do
       my_global_method(1,2,3)
     end
-    assert_match(/__/, exception.message)
+    assert_match("wrong number of arguments (3 for 2)", exception.message)
   end
 
   # ------------------------------------------------------------------
