@@ -51,8 +51,8 @@ class AboutMethods < EdgeCase::Koan
   end
 
   def test_calling_with_default_values
-    assert_equal [1, __], method_with_defaults(1)
-    assert_equal [1, __], method_with_defaults(1, 2)
+    assert_equal [1, :default_value], method_with_defaults(1)
+    assert_equal [1, 2], method_with_defaults(1, 2)
   end
 
   # ------------------------------------------------------------------
@@ -62,9 +62,9 @@ class AboutMethods < EdgeCase::Koan
   end
 
   def test_calling_with_variable_arguments
-    assert_equal __, method_with_var_args
-    assert_equal __, method_with_var_args(:one)
-    assert_equal __, method_with_var_args(:one, :two)
+    assert_equal [], method_with_var_args
+    assert_equal [:one], method_with_var_args(:one)
+    assert_equal [:one, :two], method_with_var_args(:one, :two)
   end
 
   # ------------------------------------------------------------------
@@ -76,8 +76,7 @@ class AboutMethods < EdgeCase::Koan
   end
 
   def test_method_with_explicit_return
-    assert_equal __, method_with_explicit_return
-  end
+    assert_equal :return_value, method_with_explicit_return end
 
   # ------------------------------------------------------------------
 
@@ -87,7 +86,7 @@ class AboutMethods < EdgeCase::Koan
   end
 
   def test_method_without_explicit_return
-    assert_equal __, method_without_explicit_return
+    assert_equal :return_value, method_without_explicit_return
   end
 
   # ------------------------------------------------------------------
@@ -97,11 +96,11 @@ class AboutMethods < EdgeCase::Koan
   end
 
   def test_calling_methods_in_same_class
-    assert_equal __, my_same_class_method(3,4)
+    assert_equal 12, my_same_class_method(3,4)
   end
 
   def test_calling_methods_in_same_class_with_explicit_receiver
-    assert_equal __, self.my_same_class_method(3,4)
+    assert_equal 12, self.my_same_class_method(3,4)
   end
 
   # ------------------------------------------------------------------
@@ -112,14 +111,14 @@ class AboutMethods < EdgeCase::Koan
   private :my_private_method
 
   def test_calling_private_methods_without_receiver
-    assert_equal __, my_private_method
+    assert_equal "a secret", my_private_method
   end
 
   def test_calling_private_methods_with_an_explicit_receiver
-    exception = assert_raise(___) do
+    exception = assert_raise(NoMethodError) do
       self.my_private_method
     end
-    assert_match /__/, exception.message
+    assert_match /private*/, exception.message
   end
 
   # ------------------------------------------------------------------
@@ -138,12 +137,12 @@ class AboutMethods < EdgeCase::Koan
 
   def test_calling_methods_in_other_objects_require_explicit_receiver
     rover = Dog.new
-    assert_equal __, rover.name
+    assert_equal "Fido", rover.name
   end
 
   def test_calling_private_methods_in_other_objects
     rover = Dog.new
-    assert_raise(___) do
+    assert_raise(NoMethodError) do
       rover.tail
     end
   end
