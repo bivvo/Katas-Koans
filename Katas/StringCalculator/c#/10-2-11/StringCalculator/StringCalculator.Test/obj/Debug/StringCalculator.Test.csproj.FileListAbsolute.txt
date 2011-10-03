@@ -1,0 +1,13 @@
+c:\!Dev\DeleteMe!!\StringCalculator\StringCalculator.Test\bin\Debug\StringCalculator.Test.dll
+c:\!Dev\DeleteMe!!\StringCalculator\StringCalculator.Test\bin\Debug\StringCalculator.Test.pdb
+c:\!Dev\DeleteMe!!\StringCalculator\StringCalculator.Test\bin\Debug\nunit.framework.dll
+c:\!Dev\DeleteMe!!\StringCalculator\StringCalculator.Test\bin\Debug\nunit.mocks.dll
+c:\!Dev\DeleteMe!!\StringCalculator\StringCalculator.Test\bin\Debug\pnunit.framework.dll
+c:\!Dev\DeleteMe!!\StringCalculator\StringCalculator.Test\bin\Debug\Shouldly.dll
+c:\!Dev\DeleteMe!!\StringCalculator\StringCalculator.Test\bin\Debug\StringCalculator.dll
+c:\!Dev\DeleteMe!!\StringCalculator\StringCalculator.Test\bin\Debug\StringCalculator.pdb
+c:\!Dev\DeleteMe!!\StringCalculator\StringCalculator.Test\bin\Debug\nunit.framework.xml
+c:\!Dev\DeleteMe!!\StringCalculator\StringCalculator.Test\bin\Debug\Shouldly.pdb
+c:\!Dev\DeleteMe!!\StringCalculator\StringCalculator.Test\obj\Debug\ResolveAssemblyReference.cache
+c:\!Dev\DeleteMe!!\StringCalculator\StringCalculator.Test\obj\Debug\StringCalculator.Test.dll
+c:\!Dev\DeleteMe!!\StringCalculator\StringCalculator.Test\obj\Debug\StringCalculator.Test.pdb

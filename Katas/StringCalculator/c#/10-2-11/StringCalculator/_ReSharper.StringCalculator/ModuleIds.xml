@@ -1,0 +1,4 @@
+<Modules>
+  <Module PersistentId="380C0619-5039-43B0-808B-895A99563A9A" ModuleId="StringCalculator" />
+  <Module PersistentId="B5DF1E6D-CD60-4176-91C7-78801DD48DC4" ModuleId="StringCalculator.Test" />
+</Modules>
